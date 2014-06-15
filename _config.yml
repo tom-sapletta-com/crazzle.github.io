@@ -1,0 +1,11 @@
+# Site settings
+title: crazzles blog
+email: ---
+description: "Blog about current projects" 
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: redcarpet
+permalink: pretty
+highlighter: pygments
