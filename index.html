@@ -6,15 +6,20 @@ layout: default
 
   <h1>Posts</h1>
 
-    <div class="list-group">
       {% for post in site.posts %}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item">
-          <h4 class="list-group-item-heading">{{ post.title }}</h4>
-          <p class="list-group-item-text">{{ post.date | date: "%b %-d, %Y" }}</p>
-        </a>
-      {% endfor %}
-    </div>
 
-  <p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item">
+              <h3 class="panel-title">{{ post.title }}</h3>
+            </a>
+            <h4 class="panel-title">{{ post.date | date: "%b %-d, %Y" }}</h4>
+          </div>
+          <div class="panel-body">
+            {{ post.excerpt }}
+          </div>
+        </div>
+
+      {% endfor %}
 
 </div>
