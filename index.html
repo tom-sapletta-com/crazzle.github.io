@@ -4,25 +4,53 @@ layout: default
 
 <div class="container">
 
-  <h1>Posts</h1>
-
-    {% for post in site.posts %}
-
-      <div class="panel panel-default">
-        <header class="panel-heading ">
-          <h3 class="panel-title">{{ post.title }}</h3>
-          <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
-        </header>
-        <div class="panel-body">
-          {{ post.excerpt }}
+  <div class="row">
+    <div class="span8">
+      {% for post in site.posts %}
+        <div class="span8">
+          <div class="card">
+            <div class="card-heading image">
+              <img src="https://avatars1.githubusercontent.com/u/471120?v=3&s=460" alt=""/>
+              <div class="card-heading-header">
+                <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                <span>Published {{ post.date | date: "%b %-d, %Y" }}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              {{ post.excerpt }}
+            </div>
+          </div>
         </div>
-        <footer class="panel-footer clearfix">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="pull-right">
-              <span class="glyphicon glyphicon-chevron-right"></span> Read More
-            </a>
-        </footer>
+      {% endfor %}
+    </div>
+
+
+    <div class="span4">
+      <div class="card hovercard pull-right">
+        <img src="{{ '/resources/img/duck.JPG' | prepend: site.baseurl }}" alt=""/>
+        <div class="avatar">
+          <img src="https://avatars1.githubusercontent.com/u/471120?v=3&s=460" alt="" />
+        </div>
+        <div class="info">
+          <div class="title">
+            <a href="https://github.com/crazzle">Mark Keinhörster</a>
+          </div>
+          <div class="desc">Software Engineer</div>
+          <div class="desc">Technical Enthusiast</div>
+          <div class="desc">Passionated Snowboarder</div>
+        </div>
+        <div class="bottom">
+          <a href="https://twitter.com/kein_mark" class="btn btn-block">
+            Follow on Twitter
+          </a>
+          <a href="https://plus.google.com/u/0/+MarkK-crazzle/posts" rel="publisher" class="btn btn-block">
+            Follow on Google+
+          </a>
+          <a href="https://www.facebook.com/mark.keinhoerster" rel="publisher" class="btn btn-block">
+            Follow on Facebook
+          </a>
+        </div>
       </div>
-
-    {% endfor %}
-
+    </div>
+  </div>
 </div>
