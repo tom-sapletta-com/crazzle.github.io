@@ -9,12 +9,12 @@ layout: default
       {% for post in site.posts %}
 
         <div class="panel panel-primary">
-          <div class="panel-heading">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item">
+            <div class="panel-heading">
               <h3 class="panel-title">{{ post.title }}</h3>
-            </a>
-            <h4 class="panel-title">{{ post.date | date: "%b %-d, %Y" }}</h4>
-          </div>
+              <h4 class="panel-title">{{ post.date | date: "%b %-d, %Y" }}</h4>
+            </div>
+          </a>
           <div class="panel-body">
             {{ post.excerpt }}
           </div>
