@@ -8,21 +8,21 @@ layout: default
 
     {% for post in site.posts %}
 
-      <div class="panel">
-        <div class="panel-heading">
-          <h3 class="panel-title">{{ post.title }}</h3>
-          <h4 class="panel-title">{{ post.date | date: "%b %-d, %Y" }}</h4>
-        </div>
+      <div class="panel panel-default">
+        <header class="panel-heading ">
+          <h3>{{ post.title }}</h3>
+          <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
+        </header>
         <div class="panel-body">
           {{ post.excerpt }}
         </div>
-        <div class="panel-footer">
+        <footer class="panel-footer">
           <div class="pull-right">
             <a href="{{ post.url | prepend: site.baseurl }}" class="btn">
               <span class="glyphicon glyphicon-chevron-right"></span> Read More
             </a>
           </div>
-        </div>
+        </footer>
       </div>
 
     {% endfor %}
