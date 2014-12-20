@@ -6,20 +6,23 @@ layout: default
 
   <h1>Posts</h1>
 
-      {% for post in site.posts %}
+    {% for post in site.posts %}
 
-        <div class="panel panel-primary">
-          <!--<a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item">-->
-            <div class="panel-heading">
-              <h3 class="panel-title">{{ post.title }}</h3>
-              <h4 class="panel-title">{{ post.date | date: "%b %-d, %Y" }}</h4>
-            </div>
-          <!--</a>-->
-          <div class="panel-body">
-            {{ post.excerpt }}
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ post.title }}</h3>
+          <h4 class="panel-title">{{ post.date | date: "%b %-d, %Y" }}</h4>
+        </div>
+        <div class="panel-body">
+          {{ post.excerpt }}
+        </div>
+        <div class="panel-footer clearfix">
+          <div class="pull-right">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="read more">Learn More</a>
           </div>
         </div>
+      </div>
 
-      {% endfor %}
+    {% endfor %}
 
 </div>
