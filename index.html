@@ -10,16 +10,16 @@ layout: default
 
       <div class="panel panel-default">
         <header class="panel-heading ">
-          <h3>{{ post.title }}</h3>
-          <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
+          <h3 class="panel-title">{{ post.title }}</h3>
+          <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
         </header>
         <div class="panel-body">
           {{ post.excerpt }}
         </div>
         <footer class="panel-footer">
-            <!--<a href="{{ post.url | prepend: site.baseurl }}" class="btn pull-right">-->
-              <span class="glyphicon glyphicon-chevron-right"></span> Read More
-            <!--</a><-->
+            <a href="{{ post.url | prepend: site.baseurl }}" class="pull-right">
+              <span class="glyphicon glyphicon-chevron-right">Read More</span>
+            </a>
         </footer>
       </div>
 
