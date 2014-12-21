@@ -15,7 +15,8 @@ layout: default
     </p>
   </div>
   <div class="card-actions">
-    <!--<button class="btn">+1</button>
-    <button class="btn">Share</button>-->
+    <a class="btn btn-inverse" type="button" href="https://twitter.com/home?status={{ page.url | prepend: site.baseurl | prepend: site.url }}">Share on Twitter</a>
+    <a class="btn btn-inverse" type="button" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}">Share on Facebook</a>
+    <a class="btn btn-inverse" type="button" href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}">Share on Google+</a>
   </div>
 </div>
