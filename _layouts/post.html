@@ -1,15 +1,23 @@
 ---
 layout: default
 ---
-<div class="container">
-
-  <header class="container">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="container">
-  {{ content }}
-  </article>
-
+<div class="span8">
+  <div class="card">
+    <div class="card-heading image">
+      <img src="https://avatars1.githubusercontent.com/u/471120?v=3&s=460" alt=""/>
+      <div class="card-heading-header">
+        <h3>{{ page.title }}</h3>
+        <span>Published {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>
+        {{ content }}
+      </p>
+    </div>
+    <div class="card-actions">
+      <button class="btn">+1</button>
+      <button class="btn">Share</button>
+    </div>
+  </div>
 </div>
