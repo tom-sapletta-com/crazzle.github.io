@@ -2,7 +2,7 @@
 title: Crazzle - Blog
 email: ---
 description: "Stuff about technology, software and ideas."
-baseurl: ""
+baseurl: "http://crazzle.github.io"
 url: ""
 
 # Build settings
