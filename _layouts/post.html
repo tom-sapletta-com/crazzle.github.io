@@ -15,8 +15,10 @@ layout: blog
     </p>
   </div>
   <div class="card-actions">
-    <a class="btn btn-inverse" type="button" href="https://twitter.com/home?status={{ page.url | prepend: site.baseurl | prepend: site.url }}">Share on Twitter</a>
-    <a class="btn btn-inverse" type="button" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}">Share on Facebook</a>
-    <a class="btn btn-inverse" type="button" href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}">Share on Google+</a>
+    <div class="pull-right">
+      <a href="https://twitter.com/home?status={{ page.url | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-google-plus-square fa-2x"></i></a>
+    </div>
   </div>
 </div>
