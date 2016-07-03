@@ -6,6 +6,5 @@ baseurl: "http://crazzle.github.io"
 url: ""
 
 # Build settings
-markdown: redcarpet
 permalink: pretty
 highlighter: pygments
